@@ -19,7 +19,7 @@ controller: binds everything together (receives user input and implements game l
         cell.setAttribute("class", "miss");
      }
  };
-
+view.displayHit("23");
  //model:
  const ship1 = {
      locations: ["00", "07", "21"],
