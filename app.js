@@ -54,7 +54,14 @@ const model = {
     fire: function(guess) {
         for (i = 0; i < this.numShips; i++) {
             let ship = this.ships[i];
+            let locations = ship.locations;
+            let index = locations.indexOf(guess);
+            if (index >= 0) {
+                ship.hits[index] = "hit";
+                return true;
+            }
         }
+        return false;
     }
 
 };
