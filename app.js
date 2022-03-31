@@ -89,4 +89,12 @@ model.fire("00");
 model.fire("48");
 */
 
+//controller:
 
+const controller = {
+    guesses: 0,
+
+    proccessGuess: function(guess) {
+        
+    }
+};
