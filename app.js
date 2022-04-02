@@ -50,6 +50,8 @@ const model = {
     { locations: ["42", "43", "44"], hits: ["", "", ""] },
   ],
 
+  
+
   fire: function (guess) {
     for (i = 0; i < this.numShips; i++) {
       let ship = this.ships[i];
@@ -131,3 +133,18 @@ function parseGuess(guess) {
     return null;
   };
 
+function init() {
+    let fireButton = document.getElementById("fireButton");
+    fireButton.onclick = handleFireButton;
+}
+
+function handleFireButton() {
+    let guessInput = document.getElementById("guessInput");
+    let guess = guessInput.ariaValueMax;
+    controller.processGuess(guess);
+
+    guessInput.value = "";
+
+}
+
+window.onload = init;
